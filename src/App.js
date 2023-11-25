@@ -13,23 +13,20 @@ import Remaining from "./components/Remaining";
 import ExpenseTotal from "./components/ExpenseTotal";
 import ExpenseList from "./components/ExpenseList";
 import AllocationForm from "./components/AllocationForm";
+import Currency from "./components/Currency";
+import {Col, Row} from "react-bootstrap";
 
 const App = () => {
     return (
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                <div className='row mt-3'>
-                    <Budget/>
-
-                    <div className={'col-sm'}>
-                        <Remaining/>
-                    </div>
-
-                    <div className={'col-sm'}>
-                        <ExpenseTotal/>
-                    </div>
-                </div>
+                <Row className={'align-items-center'}>
+                    <Col><Budget/></Col>
+                    <Col><Remaining/></Col>
+                    <Col><ExpenseTotal/></Col>
+                    <Col><Currency/></Col>
+                </Row>
                 <h3 className={'mt-3'}>Allocation</h3>
                 <div className={'row'}>
                     <div className={'col-sm'}>
